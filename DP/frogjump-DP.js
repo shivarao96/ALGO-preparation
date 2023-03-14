@@ -1,5 +1,5 @@
 
-function frogJumpRecursive(n, heights, memo) {
+export const frogJumpRecursive = function(n, heights, memo) {
   if (n === 0) return 0;
   if (memo[n]) return memo[n];
   const left = frogJumpRecursive(n-1, heights, memo) + Math.abs(heights[n] - heights[n-1]);
@@ -11,7 +11,7 @@ function frogJumpRecursive(n, heights, memo) {
   return memo[n];
 }
 
-function frogJumpTabulation(heights) {
+export const frogJumpTabulation = function(heights) {
   let prev1 = 0;
   let prev2 = 0;
   for(let i = 1; i < heights.length; i++) {
@@ -27,13 +27,10 @@ function frogJumpTabulation(heights) {
   return prev1;
 }
 
-function main() {
-  const heights = [10, 20, 30, 10];
-  const memo = {};
-  console.log(
-    frogJumpRecursive(heights.length - 1, heights, memo)
-  );
-  console.log(frogJumpTabulation(heights));
-}
+// const heights = [10, 20, 30, 10];
+// const memo = {};
+// console.log(
+//   frogJumpRecursive(heights.length - 1, heights, memo)
+// );
+// console.log(frogJumpTabulation(heights));
 
-main();

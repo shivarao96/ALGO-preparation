@@ -1,5 +1,5 @@
 
-function houseRobber(n, houses) {
+export const houseRobber = function(n, houses) {
   if(n === 0) return houses[n];
   if(n < 0) return 0;
   const pick = houses[n] + houseRobber(n-2, houses);
@@ -7,7 +7,7 @@ function houseRobber(n, houses) {
   return Math.max(pick, notPick);
 }
 
-function houseRobberTabulation(houses) {
+export const houseRobberTabulation = function(houses) {
   let prev1 = houses[0]; // n-1
   let prev2 = 0; // n-2
   for(let i = 1; i < houses.length; i++) {
@@ -21,11 +21,8 @@ function houseRobberTabulation(houses) {
 }
 
 
-function main() {
-  const houses = [2,7,9,3,1];
-  console.log(
-    houseRobberTabulation(houses)
-  );
-}
 
-main();
+// const houses = [2,7,9,3,1];
+// console.log(
+//   houseRobberTabulation(houses)
+// );

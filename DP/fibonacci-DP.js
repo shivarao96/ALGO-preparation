@@ -1,4 +1,4 @@
-function fibonacciMemoization(n, memo) {
+export const fibonacciMemoization = function(n, memo) {
   if(n <= 1) {
     return n;
   }
@@ -9,7 +9,7 @@ function fibonacciMemoization(n, memo) {
   return memo[n];
 }
 
-function fibonacciTabulation(n) {
+export const fibonacciTabulation = function(n) {
   let prev1 = 1;
   let prev2 = 0;
 
@@ -22,11 +22,6 @@ function fibonacciTabulation(n) {
   return prev1;
 }
 
-
-function main() {
-  const memArr = [];
-  console.log(fibonacciMemoization(6, memArr)); // TC: O(n)||SC: O(n)||SS: O(n)
-  console.log(fibonacciTabulation(6)); // TC: O(n)||SC: --||SS: --
-}
-// 0 1 1 2 3 5 8 13
-main();
+// const memArr = [];
+// console.log(fibonacciMemoization(6, memArr)); // TC: O(n)||SC: O(n)||SS: O(n)
+// console.log(fibonacciTabulation(6)); // TC: O(n)||SC: --||SS: --
