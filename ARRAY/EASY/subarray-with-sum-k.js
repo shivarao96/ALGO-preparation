@@ -41,5 +41,5 @@ function twoPointerApproach(arr, k) {
 }
 
 console.log(
-    twoPointerApproach([1,2,3,4,1,2,3,5,6,7,3,1,1,1], 3)
+    hashingSolution([0, 0, 0, 0, 5, 4, 0, 1, -1, 0, 0, 1], 0)
 );
