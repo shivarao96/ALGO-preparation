@@ -1,7 +1,7 @@
 const khadanesAlgoToFindMaximumSubarray = function(arr) {
     let maxi = arr[0];
     let sum = 0;
-    let startIndex = -1;
+    let startIndex = 0;
     let endIndex = -1;
     for(let i = 0; i < arr.length; i++) {
         sum += arr[i];

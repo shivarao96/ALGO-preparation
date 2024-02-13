@@ -19,7 +19,7 @@ function hashingSolution(arr, k) {
     }
 
     return maxlen;
-}
+} // works for both positive and negative
 
 function twoPointerApproach(arr, k) {
     let firstPointer = 0;
