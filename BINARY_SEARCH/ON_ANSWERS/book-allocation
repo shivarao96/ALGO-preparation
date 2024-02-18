@@ -1,0 +1,28 @@
+const canWeAssign = function(arr, pages) {
+    let totalPages = 0;
+    let studentCount = 1;
+    for(let i = 1; i < arr.length; i++) {
+        if(arr[i] + totalPages <= pages) {
+            totalPages += arr[i];
+        } else {
+            studentCount++;
+            totalPages = arr[i];
+        }
+    }
+
+    return studentCount;
+}
+
+const bookAllocation = function(arr, students) {
+    if(arr.length < students) return -1;
+    let low = Math.max(...arr);
+    let high = arr.reduce((a,b)=>a+b);
+    while (low <= high) {
+        const mid = Math.floor((low + high) / 2);
+        const res = canWeAssign(arr, mid    );
+        if(res > students) low = mid + 1;
+        else high = mid - 1;
+    }
+
+    return low;
+}
