@@ -1,0 +1,12 @@
+{
+  "name": "algo-preparation",
+  "version": "1.0.0",
+  "description": "Practicing and noting down algorihtm which i practiced",
+  "main": "main.js",
+  "type":"module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
