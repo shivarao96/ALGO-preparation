@@ -189,15 +189,7 @@ NodeLL.prototype.insertBeforeValWhereK = function(el, val) {
 }
 
 let head = new NodeLL(1);
-head.addArrayVals([2,3,4,5,6, 7]);
-// head.print();
-// head.deleteElemAt(2);
-head.push(8);
-// head.print();
-// head = 
-head.shift(0);
-// head.print();
-head.addElemAt(10, 12);
-head.print();
-head.insertBeforeValWhereK(10, 12);
+head.addArrayVals([2,1,0,1,0, 2]);
+
+
 head.print();
